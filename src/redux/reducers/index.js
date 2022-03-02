@@ -1,7 +1,8 @@
-import { SET_COUNTER, INCREMENT, DECREMENT } from "../action/types";
+import { SET_COUNTER, INCREMENT, DECREMENT, MULTIPLY, DIVIDE } from "../action/types";
 
 const initialState = {
   count: 10,
+  count1: 10
 };
 
 const counter = (state = initialState, action) => {
@@ -10,6 +11,7 @@ const counter = (state = initialState, action) => {
       return {
         ...state,
         count: action.payload,
+        count1: action.payload
       };
     case INCREMENT:
       return {
@@ -20,6 +22,16 @@ const counter = (state = initialState, action) => {
       return {
         ...state,
         count: state.count - 1,
+      };
+    case MULTIPLY:
+        return {
+          ...state,
+        count1: state.count1*2,
+      };
+    case DIVIDE:
+        return {
+            ...state,
+          count1: state.count1/2,
       };
     default:
       return state;

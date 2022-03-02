@@ -20,7 +20,24 @@ const ContactUs = () => {
 
   let url =
     "https://v2.jokeapi.dev/joke/any?format=json&blacklistFlags=nsfw,sexist&type=single&lang=EN&amount=10";
+
+
+
+//   useEffect(() => handleClick(), [page]);
+
+//   return (
+//     <div>
+//         {page}
+//         <button onClick={increment}>increase</button>
+//       {data?.jokes?.map((item) => {
+//         return <Card item={item} />;
+//       })}
+//     </div>
+//   );
+// };
+
   console.log(data);
+  
   return (
     <div className="container">
       <div className="d-flex">
